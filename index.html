@@ -42,43 +42,41 @@ h1 {
     background: #fff;
     width: 85vw;
     color: #000;
-    display: inline-block;
-    box-shadow: 2px 2px 1px 0px #330835;
-}
-
-.card:hover {
+    display: inline-block;            
     margin-top: 2px;
     box-shadow: none;
 }
 
 .clock {
     display: inline;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.5em;
+    font-size: 1.4em;
    
 }
 
 .time {
     display: inline;
     min-width: 24px;
+    font-family: 'arial', cursive;
+    color: grey;
 }
 
 .colon {
-    font-size: 1.1em;
     display: inline-block;
+    color: grey;
 }
 
 .date {
     display: inline;
-    min-width: 162px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'arial', cursive;
     font-size: 1.5em;
     padding-right: 30px;
+    color: grey;
 }
 .greet{
     
     display:inline;
-    font-family: 'arial', cursive;
+    font-family: 'Arial', cursive;
+    font-weight: bold;
     font-size: 2rem;
      padding-right: 30px;
 }
@@ -108,8 +106,8 @@ h1 {
 
 <script>
     function date() {
-var today = new Date();
-document.getElementById('date').innerHTML = today.toDateString();
+    var today = new Date();
+    document.getElementById('date').innerHTML =       today.toDateString();
 }
 
 
@@ -119,10 +117,10 @@ var hour = zeros(twelveHour(today.getHours()));
 var minutes = zeros(today.getMinutes());
 var seconds = zeros(today.getSeconds());
 if(today.getHours() >=12){
-    seconds+=" pm"
+    minutes+=" pm"
 }
 else{
-    seconds+=" am"
+    minutes+=" am"
 }
 hrs = today.getHours();
 if (hrs < 12)
